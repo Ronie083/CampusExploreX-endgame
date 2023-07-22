@@ -6,8 +6,6 @@ import {
     AccordionItemButton,
     AccordionItemPanel,
 } from 'react-accessible-accordion';
-
-// Demo styles, see 'Styles' section below for some notes on use.
 import 'react-accessible-accordion/dist/fancy-example.css';
 import useColleges from '../../../Hooks/useColleges/useColleges';
 
@@ -16,7 +14,6 @@ const ResearchPaper = () => {
     const [papersLimit, setPapersLimit] = useState(2);
 
     const handleSeeAll = () => {
-        // Set the limit to a high number to display all papers
         setPapersLimit(colleges.flatMap(college => college.researchPapers).length);
     };
 

@@ -1,6 +1,12 @@
+import { useContext } from "react";
 import logo from "../../../assets/logo-land.png"
+import { AuthContext } from "../../../Providers/AuthProviders";
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
+
+    const { user } = useContext(AuthContext);
+
     return (
         <div className="navbar bg-opacity-20 bg-black py-4 fixed z-[9] container">
             <div className="navbar-start">
@@ -17,23 +23,37 @@ const NavBar = () => {
                 <a href="/" className="btn btn-ghost normal-case text-xl w-40"><img src={logo} alt="logo" /></a>
             </div>
             <div className="navbar-center hidden lg:flex">
-                <ul className="menu menu-horizontal px-1">
-                    <li><a>Home</a></li>
+                <ul className="menu menu-horizontal px-1 text-white text-base font-bold">
+                    <li><Link to='/'>Home</Link></li>
                     <li><a>Colleges</a></li>
                     <li><a>Admission</a></li>
                 </ul>
             </div>
-            <div className=" navbar-end">
+            <div className="navbar-end">
                 <div className="dropdown dropdown-end">
-                    <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
-                        <div className="w-10 rounded-full">
-                            <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
-                        </div>
+                    <label tabIndex={0} className="btn btn-ghost btn-circle avatar md:mx-3" title={user?.displayName}>
+                        {
+                            user?.email ? (
+                                <div className="w-10 rounded-full">
+                                    <img src={user.photoURL} />
+                                </div>
+                            ) : (
+                                <Link to="login">Login</Link>
+                            )
+                        }
                     </label>
                     <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-                        <li><a>Profile</a></li>
-                        <li><a>My College</a></li>
-                        <li><a>Logout</a></li>
+                        {
+                            user?.email ? (
+                                <>
+                                    <li><a>Profile</a></li>
+                                    <li><a>My College</a></li>
+                                    <li><a>Logout</a></li>
+                                </>
+                            ) : (
+                                ''
+                            )
+                        }
                     </ul>
                 </div>
             </div>
