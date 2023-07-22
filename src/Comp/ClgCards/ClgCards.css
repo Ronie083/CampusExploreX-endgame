@@ -1,0 +1,30 @@
+
+.card {
+    transition: all 0.3s ease-in-out;
+    transform: scale(1);
+    overflow: hidden;
+  }
+
+  .card img {
+    height: 200px; /* Set the desired height */
+    width: 100%; /* Set the width to occupy the full width of the card */
+    object-fit: cover; /* Ensure the image covers the entire container */
+}
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+  
+  .card .hidden-event-sports {
+    visibility: hidden;
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  }
+  
+  .card:hover .hidden-event-sports {
+    visibility: visible;
+    max-height: 1000px;
+    opacity: 1;
+  }
+  

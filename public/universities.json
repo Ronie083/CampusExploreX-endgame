@@ -1,0 +1,286 @@
+{
+    "colleges": [
+        {
+            "id": 1,
+            "name": "Dhaka University",
+            "image": "https://ssl.du.ac.bd/fontView/images/body/16301600607232.jpg",
+            "rating": 4.5,
+            "admissionDate": "2023-08-20",
+            "researchCount": 120,
+            "events": [
+                {
+                    "id": 103,
+                    "name": "Cultural Week 2023",
+                    "date": "2023-09-25",
+                    "description": "Experience the diverse cultural heritage of our students through dance, music, and art."
+                },
+                {
+                    "id": 104,
+                    "name": "Science Symposium",
+                    "date": "2023-10-30",
+                    "description": "Participate in the Science Symposium and present your research findings to the academic community."
+                }
+            ],
+            "sports": [
+                {
+                    "id": 203,
+                    "name": "Volleyball",
+                    "description": "Form a team and compete in exciting volleyball matches against other colleges."
+                },
+                {
+                    "id": 204,
+                    "name": "Swimming",
+                    "description": "Dive into our swimming program and represent the university in swimming competitions."
+                }
+            ],
+            "imageGallery": [
+                {
+                    "id": 303,
+                    "image": "https://images.unsplash.com/photo-1525921429624-479b6a26d84d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+                    "description": "Students celebrating graduation day with pride and joy."
+                },
+                {
+                    "id": 304,
+                    "image": "https://images.unsplash.com/photo-1496469888073-80de7e952517?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1332&q=80",
+                    "description": "Colorful performance at the Cultural Week."
+                }
+            ],
+            "researchPapers": [
+                {
+                    "id": 403,
+                    "title": "Climate Change Impacts on Biodiversity",
+                    "authors": "David Lee, Sarah Wilson",
+                    "link": "https://example.com/research-paper-3"
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "name": "Chittagong University",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/University_of_Chittagong_main_gate.jpg/2560px-University_of_Chittagong_main_gate.jpg",
+            "rating": 4.2,
+            "admissionDate": "2023-09-15",
+            "researchCount": 80,
+            "events": [
+                {
+                    "id": 105,
+                    "name": "Art Exhibition",
+                    "date": "2023-10-10",
+                    "description": "Explore a diverse display of artistic talents in our annual Art Exhibition."
+                },
+                {
+                    "id": 106,
+                    "name": "Literary Festival",
+                    "date": "2023-11-25",
+                    "description": "Engage in thought-provoking discussions and creative writing at the Literary Festival."
+                }
+            ],
+            "sports": [
+                {
+                    "id": 205,
+                    "name": "Cricket",
+                    "description": "Be part of our cricket team and compete against other universities in thrilling matches."
+                },
+                {
+                    "id": 206,
+                    "name": "Badminton",
+                    "description": "Join our badminton club and showcase your skills on the court."
+                }
+            ],
+            "imageGallery": [
+                {
+                    "id": 305,
+                    "image": "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+                    "description": "Students showcasing their artwork at the Art Exhibition."
+                },
+                {
+                    "id": 306,
+                    "image": "https://images.unsplash.com/photo-1627556704290-2b1f5853ff78?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+                    "description": "Literary enthusiasts engaging in discussions at the Literary Festival."
+                }
+            ],
+            "researchPapers": [
+                {
+                    "id": 404,
+                    "title": "Marine Biodiversity Conservation",
+                    "authors": "Ayesha Rahman, Kamal Ahmed",
+                    "link": "https://example.com/research-paper-4"
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "name": "Rajshahi University",
+            "image": "https://images.prothomalo.com/prothomalo-english/2021-10/ac8b4e26-1340-43a3-a565-58acf608b6a7/RU.jpg?w=1200&h=675",
+            "rating": 4.4,
+            "admissionDate": "2023-09-10",
+            "researchCount": 95,
+            "events": [
+                {
+                    "id": 107,
+                    "name": "Cultural Carnival",
+                    "date": "2023-10-05",
+                    "description": "Experience the rich cultural diversity of our students through music, dance, and drama."
+                },
+                {
+                    "id": 108,
+                    "name": "Innovation Expo",
+                    "date": "2023-11-15",
+                    "description": "Witness cutting-edge innovations and projects at the Innovation Expo."
+                }
+            ],
+            "sports": [
+                {
+                    "id": 207,
+                    "name": "Hockey",
+                    "description": "Join our hockey team and compete in national level tournaments."
+                },
+                {
+                    "id": 208,
+                    "name": "Table Tennis",
+                    "description": "Sharpen your table tennis skills and participate in thrilling competitions."
+                }
+            ],
+            "imageGallery": [
+                {
+                    "id": 307,
+                    "image": "https://images.unsplash.com/photo-1627556704314-1f7aee38ec57?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+                    "description": "Students showcasing cultural performances at the Cultural Carnival."
+                },
+                {
+                    "id": 308,
+                    "image": "https://images.unsplash.com/photo-1658235081451-0f5a4af2a1b4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+                    "description": "Exciting exhibits at the Innovation Expo."
+                }
+            ],
+            "researchPapers": [
+                {
+                    "id": 405,
+                    "title": "Environmental Sustainability Strategies",
+                    "authors": "Rahul Sharma, Priya Das",
+                    "link": "https://example.com/research-paper-5"
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "name": "Khulna University",
+            "image": "https://scontent.fcgp31-1.fna.fbcdn.net/v/t31.18172-8/17389218_1872875019658432_3090179870851962653_o.jpg?_nc_cat=104&ccb=1-7&_nc_sid=09cbfe&_nc_eui2=AeFEvOCNVaRLMVyOhF0TCLY4ysborsbbkq7KxuiuxtuSrjxH1obo5JIEIyVOnFusDo5dnKTdHProCSH2nwfXwDYR&_nc_ohc=6u8Ug4509okAX8q1Z6v&_nc_ht=scontent.fcgp31-1.fna&oh=00_AfCZSy2GsYGuZSxSd1b6hf0QhVE2S8EvfehDY2jT8zGgew&oe=64E31EEE",
+            "rating": 4.3,
+            "admissionDate": "2023-09-05",
+            "researchCount": 75,
+            "events": [
+                {
+                    "id": 109,
+                    "name": "Photography Exhibition",
+                    "date": "2023-10-01",
+                    "description": "Explore captivating photographic artistry at our Photography Exhibition."
+                },
+                {
+                    "id": 110,
+                    "name": "Entrepreneurship Summit",
+                    "date": "2023-11-10",
+                    "description": "Join aspiring entrepreneurs and learn from industry leaders at the Entrepreneurship Summit."
+                }
+            ],
+            "sports": [
+                {
+                    "id": 209,
+                    "name": "Basketball",
+                    "description": "Show off your basketball skills and compete in thrilling matches against other colleges."
+                },
+                {
+                    "id": 210,
+                    "name": "Athletics",
+                    "description": "Participate in track and field events and represent the university in athletic competitions."
+                }
+            ],
+            "imageGallery": [
+                {
+                    "id": 309,
+                    "image": "https://images.unsplash.com/photo-1633734973050-d6499a977c17?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+                    "description": "Spectacular photography exhibits at the Photography Exhibition."
+                },
+                {
+                    "id": 310,
+                    "image": "https://images.unsplash.com/photo-1590012314607-cda9d9b699ae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80",
+                    "description": "Students exchanging ideas at the Entrepreneurship Summit."
+                }
+            ],
+            "researchPapers": [
+                {
+                    "id": 406,
+                    "title": "Renewable Energy Technologies",
+                    "authors": "Sanjay Gupta, Tanuja Banerjee",
+                    "link": "https://example.com/research-paper-6"
+                },
+                {
+                    "id": 406,
+                    "title": "Renewable Energy Technologies",
+                    "authors": "Sanjay Gupta, Tanuja Banerjee",
+                    "link": "https://example.com/research-paper-6"
+                },
+                {
+                    "id": 406,
+                    "title": "Renewable Energy Technologies",
+                    "authors": "Sanjay Gupta, Tanuja Banerjee",
+                    "link": "https://example.com/research-paper-6"
+                }
+            ]
+        },
+        {
+            "id": 5,
+            "name": "Jahangirnagar University",
+            "image": "https://www.bproperty.com/blog/wp-content/uploads/2021/07/Weekend-Programme-at-Jahangirnagar-University.jpg",
+            "rating": 4.6,
+            "admissionDate": "2023-09-12",
+            "researchCount": 110,
+            "events": [
+                {
+                    "id": 111,
+                    "name": "Film Festival",
+                    "date": "2023-10-08",
+                    "description": "Experience a diverse collection of films from talented student filmmakers at the Film Festival."
+                },
+                {
+                    "id": 112,
+                    "name": "Debate Championship",
+                    "date": "2023-11-20",
+                    "description": "Witness compelling debates and eloquent speakers at the Debate Championship."
+                }
+            ],
+            "sports": [
+                {
+                    "id": 211,
+                    "name": "Football",
+                    "description": "Join our football team and compete in exciting matches against other universities."
+                },
+                {
+                    "id": 212,
+                    "name": "Chess",
+                    "description": "Sharpen your strategic thinking with chess tournaments and championships."
+                }
+            ],
+            "imageGallery": [
+                {
+                    "id": 311,
+                    "image": "https://images.unsplash.com/photo-1534009916851-7850ba974f9c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80",
+                    "description": "Captivating films showcased at the Film Festival."
+                },
+                {
+                    "id": 312,
+                    "image": "https://images.unsplash.com/photo-1527269534026-c86f4009eace?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1025&q=80",
+                    "description": "Engaging debates at the Debate Championship."
+                }
+            ],
+            "researchPapers": [
+                {
+                    "id": 407,
+                    "title": "Gender Equality and Women Empowerment",
+                    "authors": "Sneha Das, Karim Ali",
+                    "link": "https://example.com/research-paper-7"
+                }
+            ]
+        }
+    ]
+}
