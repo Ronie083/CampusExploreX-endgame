@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const NavBar = () => {
 
-    const { user } = useContext(AuthContext);
+    const { user, logOut } = useContext(AuthContext);
 
     return (
         <div className="navbar bg-opacity-20 bg-black py-4 fixed z-[9] container">
@@ -25,7 +25,7 @@ const NavBar = () => {
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1 text-white text-base font-bold">
                     <li><Link to='/'>Home</Link></li>
-                    <li><a>Colleges</a></li>
+                    <li><Link to="/colleges">Colleges</Link></li>
                     <li><a>Admission</a></li>
                 </ul>
             </div>
@@ -38,23 +38,24 @@ const NavBar = () => {
                                     <img src={user.photoURL} />
                                 </div>
                             ) : (
-                                <Link to="login">Login</Link>
+                                <Link className="text-white" to="login">Login</Link>
                             )
                         }
                     </label>
-                    <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-                        {
-                            user?.email ? (
-                                <>
+                    {
+                        user?.email ? (
+                            <>
+                                <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
                                     <li><a>Profile</a></li>
                                     <li><a>My College</a></li>
-                                    <li><a>Logout</a></li>
-                                </>
-                            ) : (
-                                ''
-                            )
-                        }
-                    </ul>
+                                    <li><a onClick={logOut}>Logout</a></li>
+                                </ul>
+                            </>
+                        ) : (
+                            ''
+                        )
+                    }
+
                 </div>
             </div>
         </div>
@@ -62,3 +63,4 @@ const NavBar = () => {
 };
 
 export default NavBar;
+

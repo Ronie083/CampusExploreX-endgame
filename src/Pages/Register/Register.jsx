@@ -1,14 +1,18 @@
 import { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { BsFacebook, BsGoogle } from "react-icons/bs";
 import { AuthContext } from "../../Providers/AuthProviders";
 
 
 const Register = () => {
 
-    const { createUser } = useContext(AuthContext);
-
+    const { createUser, googleLogin } = useContext(AuthContext);
+    const navigate = useNavigate();
+    const location = useLocation();
     const [passwordAlert, setPasswordAlert] = useState("");
+
+    const from = location.state?.from?.pathname || '/';
+
 
     const handleSignUp = event => {
         event.preventDefault();
@@ -38,6 +42,11 @@ const Register = () => {
     };
 
 
+    const handleGoogleLogin = () => {
+        googleLogin();
+        navigate(from, { replace: true });
+    }
+
     return (
         <div>
             <div className="hero min-h-screen" style={{ backgroundImage: "url(https://images.unsplash.com/photo-1498243691581-b145c3f54a5a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80)" }}>
@@ -47,7 +56,7 @@ const Register = () => {
                             <div className="text-center">
                                 <p className="my-2 text-lg font-bold">You can also Sign Up with</p>
                                 <hr className="my-3" />
-                                <button className="btn btn-outline btn-error rounded-2xl"><BsGoogle></BsGoogle></button>
+                                <button onSubmit={handleGoogleLogin} className="btn btn-outline btn-error rounded-2xl"><BsGoogle></BsGoogle></button>
                                 <button className="ml-3 btn btn-outline btn-info rounded-2xl"><BsFacebook></BsFacebook></button>
                             </div>
                         </div>

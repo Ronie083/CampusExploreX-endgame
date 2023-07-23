@@ -1,18 +1,23 @@
 import { useContext, useState } from "react";
 import { BsFacebook, BsFillEyeFill, BsFillEyeSlashFill, BsGoogle } from 'react-icons/bs';
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProviders";
 
 
 const Login = () => {
 
+    const { login, googleLogin } = useContext(AuthContext)
     const [showPassword, setShowPassword] = useState(false);
+    const navigate = useNavigate();
+    const location = useLocation();
+
+    const from = location.state?.from?.pathname || '/';
 
     const togglePasswordVisibility = () => {
         setShowPassword(!showPassword);
     };
 
-    const { login } = useContext(AuthContext)
+
 
     const handleLogin = event => {
         event.preventDefault();
@@ -24,11 +29,17 @@ const Login = () => {
             .then(result => {
                 const user = result.user;
                 console.log(user);
+                navigate(from, { replace: true });
             })
             .catch(() => {
                 console.log(error.message)
             })
         form.reset();
+    }
+
+    const handleGoogleLogin = () => {
+        googleLogin();
+        navigate(from, { replace: true });
     }
 
     return (
@@ -82,7 +93,7 @@ const Login = () => {
                             </div>
                             <div className="text-center">
                                 <p className="my-5 text-xl font-bold">You can also login with</p>
-                                <button className="btn btn-outline btn-error rounded-2xl"><BsGoogle></BsGoogle></button>
+                                <button onClick={handleGoogleLogin} className="btn btn-outline btn-error rounded-2xl"><BsGoogle></BsGoogle></button>
                                 <button className="ml-3 btn btn-outline btn-info rounded-2xl"><BsFacebook></BsFacebook></button>
                             </div>
                         </form>
