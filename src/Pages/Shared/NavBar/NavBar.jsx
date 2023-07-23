@@ -16,9 +16,9 @@ const NavBar = () => {
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                     </label>
                     <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-                        <li><a>Home</a></li>
-                        <li><a>Colleges</a></li>
-                        <li><a>Admission</a></li>
+                        <li><Link to='/'>Home</Link></li>
+                        <li><Link to="/colleges">Colleges</Link></li>
+                        <li><Link to="/admission">Admission</Link></li>
                     </ul>
                 </div>
                 <a href="/" className="btn btn-ghost normal-case text-xl w-40"><img src={logo} alt="logo" /></a>
@@ -48,7 +48,7 @@ const NavBar = () => {
                             <>
                                 <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
                                     <li><Link to="Profile">Profile</Link></li>
-                                    <li><a>My College</a></li>
+                                    <li><Link to="myCollege">My College</Link></li>
                                     <li><a onClick={logOut}>Logout</a></li>
                                 </ul>
                             </>

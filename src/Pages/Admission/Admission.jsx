@@ -39,11 +39,11 @@ const Admission = () => {
                     </table>
                 </div>
                 <dialog id="my_modal_3" className="modal">
-                    <form method="dialog" className="modal-box">
-                        <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+                    <div method="dialog" className="modal-box">
                         <h3 className="font-bold text-lg text-center">Apply Now</h3>
                         <ApplyUniversity></ApplyUniversity>
-                    </form>
+                        <p>To exit press ESC</p>
+                    </div>
                 </dialog>
             </div>
         </div>

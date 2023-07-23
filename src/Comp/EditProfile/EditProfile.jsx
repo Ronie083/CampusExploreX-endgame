@@ -5,6 +5,7 @@ import { AuthContext } from "../../Providers/AuthProviders";
 const EditProfile = () => {
 
     const {user} = useContext(AuthContext);
+    
     return (
         <form>
             <div className="form-control">
