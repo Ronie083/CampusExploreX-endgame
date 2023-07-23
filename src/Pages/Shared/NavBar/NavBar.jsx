@@ -2,6 +2,7 @@ import { useContext } from "react";
 import logo from "../../../assets/logo-land.png"
 import { AuthContext } from "../../../Providers/AuthProviders";
 import { Link } from "react-router-dom";
+import Profile from "../../Profile/Profile";
 
 const NavBar = () => {
 
@@ -46,7 +47,7 @@ const NavBar = () => {
                         user?.email ? (
                             <>
                                 <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-                                    <li><a>Profile</a></li>
+                                    <li><Link to="Profile">Profile</Link></li>
                                     <li><a>My College</a></li>
                                     <li><a onClick={logOut}>Logout</a></li>
                                 </ul>

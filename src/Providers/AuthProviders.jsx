@@ -1,10 +1,11 @@
 import { createContext, useEffect, useState } from "react";
-import { GoogleAuthProvider, createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
+import { FacebookAuthProvider, GoogleAuthProvider, createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
 import { app } from "../firebase/firebase.config";
 
 export const AuthContext = createContext(null);
 const auth = getAuth(app);
 const googleProvider = new GoogleAuthProvider();
+const fbProvider = new FacebookAuthProvider();
 
 const AuthProviders = ({children}) => {
 
@@ -26,6 +27,17 @@ const AuthProviders = ({children}) => {
         .then(result => {
             const googleUser = result.user;
             console.log(googleUser);
+        })
+        .catch(() => {
+            console.log(error.message)
+        })
+    }
+
+    const fbLogin = () => {
+        signInWithPopup(auth, fbProvider)
+        .then(result => {
+            const fbUser = result.user;
+            console.log(fbUser);
         })
         .catch(() => {
             console.log(error.message)
@@ -55,7 +67,8 @@ const AuthProviders = ({children}) => {
         createUser,
         login,
         logOut,
-        googleLogin
+        googleLogin,
+        fbLogin
     }
 
     return (

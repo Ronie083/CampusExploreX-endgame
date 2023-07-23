@@ -9,6 +9,7 @@ import Colleges from "../Pages/Colleges/Colleges";
 import CollegeDetails from "../Pages/CollegeDetails/CollegeDetails";
 import PrivateRoute from "./PrivateRoute";
 import NotFound from "../Pages/NotFound/NotFound";
+import Profile from "../Pages/Profile/Profile";
 
 export const router = createBrowserRouter([
     {
@@ -34,6 +35,10 @@ export const router = createBrowserRouter([
             {
                 path: "details/:id",
                 element: <PrivateRoute><CollegeDetails></CollegeDetails></PrivateRoute>,
+            },
+            {
+                path: "profile",
+                element: <PrivateRoute><Profile></Profile></PrivateRoute>
             }
         ]
     },

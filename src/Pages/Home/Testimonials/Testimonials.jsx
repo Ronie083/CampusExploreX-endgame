@@ -44,7 +44,7 @@ const Testimonials = () => {
                                 <div className="grid grid-cols-2 gap-5 justify-items-center p-10">
                                     {
                                         review.reviewsList.map(reviewList => (
-                                            <div className="card w-96 bg-base-100 shadow-xl">
+                                            <div key={reviewList.id} className="card w-96 bg-base-100 shadow-xl">
                                                 <div className="card-body">
                                                     <BsChatSquareQuoteFill className="w-10 h-10" />
                                                     <h2 className="card-title">

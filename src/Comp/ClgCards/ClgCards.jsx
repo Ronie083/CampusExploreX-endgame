@@ -14,8 +14,8 @@ const ClgCards = ({limit}) => {
         <div className="grid grid-cols-3 justify-items-center">
             {
                 collegesToShow.map(college => (
-                    <div className="card w-96 glass shadow-xl expandable-card my-5">
-                        <div className="">
+                    <div key={college.id} className="card w-96 glass shadow-xl expandable-card my-5">
+                        <div>
                             <figure className="px-10 pt-10">
                                 <img src={college.image} alt="image" className="rounded-xl" />
                             </figure>

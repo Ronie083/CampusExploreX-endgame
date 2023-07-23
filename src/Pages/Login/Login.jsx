@@ -6,7 +6,7 @@ import { AuthContext } from "../../Providers/AuthProviders";
 
 const Login = () => {
 
-    const { login, googleLogin } = useContext(AuthContext)
+    const { login, googleLogin, fbLogin } = useContext(AuthContext)
     const [showPassword, setShowPassword] = useState(false);
     const navigate = useNavigate();
     const location = useLocation();
@@ -40,6 +40,11 @@ const Login = () => {
     const handleGoogleLogin = () => {
         googleLogin();
         navigate(from, { replace: true });
+    }
+
+    const handleFbLogin = () => {
+        fbLogin();
+        navigate(from, { replace: true })
     }
 
     return (
@@ -94,7 +99,7 @@ const Login = () => {
                             <div className="text-center">
                                 <p className="my-5 text-xl font-bold">You can also login with</p>
                                 <button onClick={handleGoogleLogin} className="btn btn-outline btn-error rounded-2xl"><BsGoogle></BsGoogle></button>
-                                <button className="ml-3 btn btn-outline btn-info rounded-2xl"><BsFacebook></BsFacebook></button>
+                                <button onClick={handleFbLogin} className="ml-3 btn btn-outline btn-info rounded-2xl"><BsFacebook></BsFacebook></button>
                             </div>
                         </form>
                     </div>
