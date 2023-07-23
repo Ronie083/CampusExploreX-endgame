@@ -5,10 +5,10 @@ const useColleges = () => {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        fetch('universities.json')
+        fetch('http://localhost:5000/universities')
             .then(res => res.json())
             .then(data => {
-                setColleges(data.colleges)
+                setColleges(data)
                 setLoading(false)
             })
             .catch(error => {

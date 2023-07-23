@@ -7,10 +7,10 @@ const useReviews = () => {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        fetch('reviews.json')
+        fetch('http://localhost:5000/reviews')
             .then(res => res.json())
             .then(data => {
-                setReviews(data.reviews);
+                setReviews(data);
                 setLoading(false)
             })
             .catch(error => {

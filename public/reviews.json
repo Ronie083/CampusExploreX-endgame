@@ -1,94 +1,92 @@
-{
-    "reviews": [
-        {
-            "collegeId": 1,
-            "collegeName": "Dhaka University",
-            "reviewsList": [
-                {
-                    "id": 501,
-                    "user": "John Doe",
-                    "rating": 4.8,
-                    "reviewText": "Dhaka University offers an excellent academic environment and a wide range of extracurricular activities. I had an amazing experience here!"
-                },
-                {
-                    "id": 502,
-                    "user": "Jane Smith",
-                    "rating": 4.5,
-                    "reviewText": "Great university with passionate faculty and diverse student community. The events and sports activities are always enjoyable."
-                }
-            ]
-        },
-        {
-            "collegeId": 2,
-            "collegeName": "Chittagong University",
-            "reviewsList": [
-                {
-                    "id": 503,
-                    "user": "Michael Johnson",
-                    "rating": 4.2,
-                    "reviewText": "Chittagong University has a beautiful campus and supportive professors. The literary festival was a highlight of my time here."
-                },
-                {
-                    "id": 504,
-                    "user": "Emily Adams",
-                    "rating": 4.0,
-                    "reviewText": "I had a great experience at Chittagong University, especially in the badminton club. The art exhibition was inspiring."
-                }
-            ]
-        },
-        {
-            "collegeId": 3,
-            "collegeName": "Rajshahi University",
-            "reviewsList": [
-                {
-                    "id": 505,
-                    "user": "Robert Wilson",
-                    "rating": 4.4,
-                    "reviewText": "Rajshahi University offers excellent academic programs and exciting events like the cultural carnival. Highly recommended!"
-                },
-                {
-                    "id": 506,
-                    "user": "Sophia Lee",
-                    "rating": 4.3,
-                    "reviewText": "I enjoyed participating in hockey tournaments at Rajshahi University. The innovation expo was impressive."
-                }
-            ]
-        },
-        {
-            "collegeId": 4,
-            "collegeName": "Khulna University",
-            "reviewsList": [
-                {
-                    "id": 507,
-                    "user": "William Turner",
-                    "rating": 4.1,
-                    "reviewText": "Khulna University has a great atmosphere for learning and the photography exhibition was outstanding."
-                },
-                {
-                    "id": 508,
-                    "user": "Olivia Carter",
-                    "rating": 4.6,
-                    "reviewText": "The entrepreneurship summit at Khulna University was an eye-opener. The basketball matches were exhilarating!"
-                }
-            ]
-        },
-        {
-            "collegeId": 5,
-            "collegeName": "Jahangirnagar University",
-            "reviewsList": [
-                {
-                    "id": 509,
-                    "user": "Daniel Brown",
-                    "rating": 4.7,
-                    "reviewText": "Jahangirnagar University is known for its film festival, which I thoroughly enjoyed. The football team is fantastic!"
-                },
-                {
-                    "id": 510,
-                    "user": "Ava Wilson",
-                    "rating": 4.9,
-                    "reviewText": "The debate championship at Jahangirnagar University was intellectually stimulating. Loved every moment here!"
-                }
-            ]
-        }
-    ]
-}
+[
+    {
+        "collegeId": 1,
+        "collegeName": "Dhaka University",
+        "reviewsList": [
+            {
+                "id": 501,
+                "user": "John Doe",
+                "rating": 4.8,
+                "reviewText": "Dhaka University offers an excellent academic environment and a wide range of extracurricular activities. I had an amazing experience here!"
+            },
+            {
+                "id": 502,
+                "user": "Jane Smith",
+                "rating": 4.5,
+                "reviewText": "Great university with passionate faculty and diverse student community. The events and sports activities are always enjoyable."
+            }
+        ]
+    },
+    {
+        "collegeId": 2,
+        "collegeName": "Chittagong University",
+        "reviewsList": [
+            {
+                "id": 503,
+                "user": "Michael Johnson",
+                "rating": 4.2,
+                "reviewText": "Chittagong University has a beautiful campus and supportive professors. The literary festival was a highlight of my time here."
+            },
+            {
+                "id": 504,
+                "user": "Emily Adams",
+                "rating": 4.0,
+                "reviewText": "I had a great experience at Chittagong University, especially in the badminton club. The art exhibition was inspiring."
+            }
+        ]
+    },
+    {
+        "collegeId": 3,
+        "collegeName": "Rajshahi University",
+        "reviewsList": [
+            {
+                "id": 505,
+                "user": "Robert Wilson",
+                "rating": 4.4,
+                "reviewText": "Rajshahi University offers excellent academic programs and exciting events like the cultural carnival. Highly recommended!"
+            },
+            {
+                "id": 506,
+                "user": "Sophia Lee",
+                "rating": 4.3,
+                "reviewText": "I enjoyed participating in hockey tournaments at Rajshahi University. The innovation expo was impressive."
+            }
+        ]
+    },
+    {
+        "collegeId": 4,
+        "collegeName": "Khulna University",
+        "reviewsList": [
+            {
+                "id": 507,
+                "user": "William Turner",
+                "rating": 4.1,
+                "reviewText": "Khulna University has a great atmosphere for learning and the photography exhibition was outstanding."
+            },
+            {
+                "id": 508,
+                "user": "Olivia Carter",
+                "rating": 4.6,
+                "reviewText": "The entrepreneurship summit at Khulna University was an eye-opener. The basketball matches were exhilarating!"
+            }
+        ]
+    },
+    {
+        "collegeId": 5,
+        "collegeName": "Jahangirnagar University",
+        "reviewsList": [
+            {
+                "id": 509,
+                "user": "Daniel Brown",
+                "rating": 4.7,
+                "reviewText": "Jahangirnagar University is known for its film festival, which I thoroughly enjoyed. The football team is fantastic!"
+            },
+            {
+                "id": 510,
+                "user": "Ava Wilson",
+                "rating": 4.9,
+                "reviewText": "The debate championship at Jahangirnagar University was intellectually stimulating. Loved every moment here!"
+            }
+        ]
+    }
+]

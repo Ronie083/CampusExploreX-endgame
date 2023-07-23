@@ -1,10 +1,11 @@
-import useColleges from "../../Hooks/useColleges/useColleges";
+// import { useLoaderData } from "react-router-dom";
+
 
 
 const CollegeDetails = () => {
 
-    const [colleges] = useColleges()
-
+    // const colleges = useLoaderData();
+    // console.log(colleges)
     
 
     return (
