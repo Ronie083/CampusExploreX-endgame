@@ -23,11 +23,10 @@ const Profile = () => {
                             <p className="py-2">Address: {user.address}</p>
                             <button className="btn btn-outline bg-[#F56A1E] rounded-3xl my-5" onClick={() => window.my_modal_3.showModal()}>Edit Profile</button>
                             <dialog id="my_modal_3" className="modal">
-                                <form method="dialog" className="modal-box">
-                                    <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+                                <div method="dialog" className="modal-box">
                                     <h3 className="font-bold text-lg text-center">Edit Profile</h3>
                                     <EditProfile></EditProfile>
-                                </form>
+                                </div>
                             </dialog>
                         </div>
                     </div>

@@ -1,13 +1,14 @@
 import { createContext, useEffect, useState } from "react";
 import { FacebookAuthProvider, GoogleAuthProvider, createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
 import { app } from "../firebase/firebase.config";
+import { toast } from "react-toastify";
 
 export const AuthContext = createContext(null);
 const auth = getAuth(app);
 const googleProvider = new GoogleAuthProvider();
 const fbProvider = new FacebookAuthProvider();
 
-const AuthProviders = ({children}) => {
+const AuthProviders = ({ children }) => {
 
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(true);
@@ -22,26 +23,40 @@ const AuthProviders = ({children}) => {
         return signInWithEmailAndPassword(auth, email, password);
     }
 
-    const googleLogin = () =>{
+    const googleLogin = () => {
         signInWithPopup(auth, googleProvider)
-        .then(result => {
-            const googleUser = result.user;
-            console.log(googleUser);
-        })
-        .catch(() => {
-            console.log(error.message)
-        })
+            .then(result => {
+                const googleUser = result.user;
+                const saveUser = { email: googleUser.email, name: googleUser.displayName, photoURL: googleUser.photoURL }
+                fetch('http://localhost:5000/users', {
+                    method: 'POST',
+                    headers: {
+                        'content-type': 'application/json'
+                    },
+                    body: JSON.stringify(saveUser)
+                })
+                .then(res => res.json())
+                .then(data => {
+                    if(data.insertedId){
+                        toast('Login Successful')
+                    }
+                })
+                console.log(googleUser);
+            })
+            .catch(() => {
+                console.log(error.message)
+            })
     }
 
     const fbLogin = () => {
         signInWithPopup(auth, fbProvider)
-        .then(result => {
-            const fbUser = result.user;
-            console.log(fbUser);
-        })
-        .catch(() => {
-            console.log(error.message)
-        })
+            .then(result => {
+                const fbUser = result.user;
+                console.log(fbUser);
+            })
+            .catch(() => {
+                console.log(error.message)
+            })
     }
 
     const logOut = () => {

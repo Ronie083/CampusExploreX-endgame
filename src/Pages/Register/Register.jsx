@@ -2,6 +2,8 @@ import { useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { BsFacebook, BsGoogle } from "react-icons/bs";
 import { AuthContext } from "../../Providers/AuthProviders";
+import { toast } from "react-toastify";
+import { updateProfile } from "firebase/auth";
 
 
 const Register = () => {
@@ -14,7 +16,7 @@ const Register = () => {
     const from = location.state?.from?.pathname || '/';
 
 
-    const handleSignUp = event => {
+    const handleSignUp = (event) => {
         event.preventDefault();
         const form = event.target;
         const email = form.email.value;
@@ -34,11 +36,41 @@ const Register = () => {
         console.log(email, name, photoURL, address, password);
 
         createUser(email, name, photoURL, address)
-            .then(result => {
+            .then((result) => {
                 const user = result.user;
                 console.log(user);
+                saveUserDataToServer(email, name, photoURL);
+                updateProfile(user, {
+                    displayName: name,
+                    photoURL: photoURL,
+                })
+                form.reset();
             })
-        form.reset();
+            .catch((error) => {
+                console.error("Error while signing up:", error);
+                toast.error("Failed to sign up. Please try again later.");
+            });
+    };
+
+    const saveUserDataToServer = (email, name, photoURL) => {
+        const saveUser = { email, name, photoURL };
+        fetch('http://localhost:5000/users', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(saveUser)
+        })
+            .then(res => res.json())
+            .then(data => {
+                if (data.insertedId) {
+                    toast("Your application submitted");
+                }
+            })
+            .catch(error => {
+                console.error("Error while saving user data:", error);
+                toast.error("Failed to save user data. Please try again later.");
+            });
     };
 
 
