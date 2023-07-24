@@ -25,4 +25,8 @@ CampusExploreX is built on the MERN stack (MongoDB, Express, React, Node.js), pr
 - Other Dependencies: axios, react-router-dom, etc.
 
 # Live link
-Here is the live site link- # https://campus-explore-x.web.app/
+Here is the live site link: # https://campus-explore-x.web.app/
+
+
+# Note
+Unfortunately, due to constant load shedding in my area and my running exam, I am currently unable to dedicate the necessary time and focus to complete these tasks. Load shedding has been disrupting my internet connection and work schedule, making it difficult to work on the web application effectively. But I tried my best and still, I failed to finish Review and Update Profile section. 
