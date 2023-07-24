@@ -17,7 +17,7 @@ export const router = createBrowserRouter([
     {
         path: "/",
         element: <Main></Main>,
-        children:[
+        children: [
             {
                 path: "/",
                 element: <Home></Home>
@@ -37,7 +37,7 @@ export const router = createBrowserRouter([
             {
                 path: "/details/:id",
                 element: <PrivateRoute><CollegeDetails></CollegeDetails></PrivateRoute>,
-                loader: ({params}) => fetch(`http://localhost:5000/universities/${params.id}`)
+                loader: ({ params }) => fetch(`http://localhost:5000/universities/${params.id}`)
             },
             {
                 path: "profile",
@@ -49,7 +49,7 @@ export const router = createBrowserRouter([
             },
             {
                 path: "myCollege",
-                element: <MyCollege></MyCollege>
+                element: <PrivateRoute><MyCollege></MyCollege></PrivateRoute>
             }
         ]
     },

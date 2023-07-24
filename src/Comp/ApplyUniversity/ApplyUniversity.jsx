@@ -1,7 +1,18 @@
+import { useContext, useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
+import { AuthContext } from "../../Providers/AuthProviders";
 
 
-const ApplyUniversity = () => {
+const ApplyUniversity = ({ college }) => {
+
+    const [university, setUniversity] = useState(college ? college.name : '');
+    const { user } = useContext(AuthContext)
+    console.log(user.displayName)
+
+    const handleUniversityChange = (event) => {
+        setUniversity(event.target.value);
+    };
+
 
     const handleApply = (event) => {
         event.preventDefault();
@@ -58,7 +69,7 @@ const ApplyUniversity = () => {
                     <label className="label">
                         <span className="label-text">University Name</span>
                     </label>
-                    <input type="text" name="university" placeholder="university" className="input input-bordered" />
+                    <input type="text" name="university" placeholder="university" className="input input-bordered" value={university} onChange={handleUniversityChange} />
                 </div>
             </div>
             <div className="flex justify-between">
