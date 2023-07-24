@@ -41,10 +41,10 @@ const Testimonials = () => {
                         <SwiperSlide key={review.id}>
                             <div className="swiper-zoom-container flex flex-col">
                                 <h1>{review.collegeName}</h1>
-                                <div className="grid grid-cols-2 gap-5 justify-items-center p-10">
+                                <div className="grid md:grid-cols-2 gap-5 justify-items-center p-10">
                                     {
                                         review.reviewsList.map(reviewList => (
-                                            <div key={reviewList.id} className="card w-96 bg-base-100 shadow-xl">
+                                            <div key={reviewList.id} className="card md:w-96 bg-base-100 shadow-xl">
                                                 <div className="card-body">
                                                     <BsChatSquareQuoteFill className="w-10 h-10" />
                                                     <h2 className="card-title">
