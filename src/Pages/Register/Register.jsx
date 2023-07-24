@@ -54,7 +54,7 @@ const Register = () => {
 
     const saveUserDataToServer = (email, name, photoURL) => {
         const saveUser = { email, name, photoURL };
-        fetch('http://localhost:5000/users', {
+        fetch('https://campus-explore-x-endgame-srver.vercel.app/users', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

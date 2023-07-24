@@ -9,7 +9,7 @@ const UseMyCollege = () => {
     const {isLoading, data: applied = []} = useQuery({
         queryKey: ['applied', user?.email],
         queryFn: async () => {
-            const res = await fetch(`http://localhost:5000/applied?email=${user?.email}`)
+            const res = await fetch(`https://campus-explore-x-endgame-srver.vercel.app/applied?email=${user?.email}`)
             return res.json();
         },
     })

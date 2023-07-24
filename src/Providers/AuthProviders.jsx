@@ -28,7 +28,7 @@ const AuthProviders = ({ children }) => {
             .then(result => {
                 const googleUser = result.user;
                 const saveUser = { email: googleUser.email, name: googleUser.displayName, photoURL: googleUser.photoURL }
-                fetch('http://localhost:5000/users', {
+                fetch('https://campus-explore-x-endgame-srver.vercel.app/users', {
                     method: 'POST',
                     headers: {
                         'content-type': 'application/json'

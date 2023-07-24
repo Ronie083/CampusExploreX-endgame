@@ -37,7 +37,7 @@ export const router = createBrowserRouter([
             {
                 path: "/details/:id",
                 element: <PrivateRoute><CollegeDetails></CollegeDetails></PrivateRoute>,
-                loader: ({ params }) => fetch(`http://localhost:5000/universities/${params.id}`)
+                loader: ({ params }) => fetch(`https://campus-explore-x-endgame-srver.vercel.app/universities/${params.id}`)
             },
             {
                 path: "profile",

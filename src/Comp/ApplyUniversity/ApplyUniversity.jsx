@@ -27,7 +27,7 @@ const ApplyUniversity = ({ college }) => {
         const imgLink = form.imgLink.value;
 
         const studentInfo = { name, email, subject, university, birthDate, phone, address, imgLink }
-        fetch('http://localhost:5000/applied', {
+        fetch('https://campus-explore-x-endgame-srver.vercel.app/applied', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

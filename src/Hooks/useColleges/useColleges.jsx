@@ -5,7 +5,7 @@ const useColleges = () => {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        fetch('http://localhost:5000/universities')
+        fetch('https://campus-explore-x-endgame-srver.vercel.app/universities')
             .then(res => res.json())
             .then(data => {
                 setColleges(data)
